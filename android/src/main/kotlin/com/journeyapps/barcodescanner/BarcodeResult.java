@@ -26,13 +26,12 @@ public class BarcodeResult {
     private static final float PREVIEW_LINE_WIDTH = 4.0f;
     private static final float PREVIEW_DOT_WIDTH = 10.0f;
 
-    @Nullable
     protected Result mResult;
     protected SourceData sourceData;
 
     private final int mScaleFactor = 2;
 
-    public BarcodeResult(@Nullable Result result, SourceData sourceData) {
+    public BarcodeResult(Result result, SourceData sourceData) {
         this.mResult = result;
         this.sourceData = sourceData;
     }
@@ -50,7 +49,6 @@ public class BarcodeResult {
     /**
      * @return wrapped {@link com.google.zxing.Result}
      */
-    @Nullable
     public Result getResult() {
         return mResult;
     }
