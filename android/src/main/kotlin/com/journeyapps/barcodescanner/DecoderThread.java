@@ -145,24 +145,31 @@ public class DecoderThread {
         if (source != null) {
             rawResult = decoder.decode(source);
         }
-
-        if (rawResult != null) {
-            // Don't log the barcode contents for security.
-            long end = System.currentTimeMillis();
-            Log.d(TAG, "Found barcode in " + (end - start) + " ms");
-            if (resultHandler != null) {
-                BarcodeResult barcodeResult = new BarcodeResult(rawResult, sourceData);
-                Message message = Message.obtain(resultHandler, R.id.zxing_decode_succeeded, barcodeResult);
-                Bundle bundle = new Bundle();
-                message.setData(bundle);
-                message.sendToTarget();
-            }
-        } else {
-            if (resultHandler != null) {
-                Message message = Message.obtain(resultHandler, R.id.zxing_decode_failed);
-                message.sendToTarget();
-            }
+        if (resultHandler != null) {
+            BarcodeResult barcodeResult = new BarcodeResult(rawResult, sourceData);
+            Message message = Message.obtain(resultHandler, R.id.zxing_decode_succeeded, barcodeResult);
+            Bundle bundle = new Bundle();
+            message.setData(bundle);
+            message.sendToTarget();
         }
+
+        // if (rawResult != null) {
+        //     // Don't log the barcode contents for security.
+        //     long end = System.currentTimeMillis();
+        //     Log.d(TAG, "Found barcode in " + (end - start) + " ms");
+        //     if (resultHandler != null) {
+        //         BarcodeResult barcodeResult = new BarcodeResult(rawResult, sourceData);
+        //         Message message = Message.obtain(resultHandler, R.id.zxing_decode_succeeded, barcodeResult);
+        //         Bundle bundle = new Bundle();
+        //         message.setData(bundle);
+        //         message.sendToTarget();
+        //     }
+        // } else {
+        //     if (resultHandler != null) {
+        //         Message message = Message.obtain(resultHandler, R.id.zxing_decode_failed);
+        //         message.sendToTarget();
+        //     }
+        // }
         if (resultHandler != null) {
             List<ResultPoint> resultPoints = BarcodeResult.transformResultPoints(decoder.getPossibleResultPoints(), sourceData);
                     Message message = Message.obtain(resultHandler, R.id.zxing_possible_result_points, resultPoints);
