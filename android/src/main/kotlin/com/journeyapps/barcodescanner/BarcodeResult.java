@@ -26,12 +26,13 @@ public class BarcodeResult {
     private static final float PREVIEW_LINE_WIDTH = 4.0f;
     private static final float PREVIEW_DOT_WIDTH = 10.0f;
 
+    @Nullable
     protected Result mResult;
     protected SourceData sourceData;
 
     private final int mScaleFactor = 2;
 
-    public BarcodeResult(Result result, SourceData sourceData) {
+    public BarcodeResult(@Nullable Result result, SourceData sourceData) {
         this.mResult = result;
         this.sourceData = sourceData;
     }
@@ -49,6 +50,7 @@ public class BarcodeResult {
     /**
      * @return wrapped {@link com.google.zxing.Result}
      */
+    @Nullable
     public Result getResult() {
         return mResult;
     }
@@ -121,7 +123,11 @@ public class BarcodeResult {
      * @see Result#getText()
      */
     public String getText() {
-        return mResult.getText();
+        if (mResult != null) {
+            return mResult.getText();
+        } else {
+            return '';
+        }
     }
 
     /**
@@ -129,7 +135,11 @@ public class BarcodeResult {
      * @see Result#getRawBytes()
      */
     public byte[] getRawBytes() {
-        return mResult.getRawBytes();
+        if (mResult != null) {
+            return mResult.getRawBytes();
+        } else {
+            return null;
+        }
     }
 
     /**
@@ -139,7 +149,11 @@ public class BarcodeResult {
      * @see Result#getResultPoints()
      */
     public ResultPoint[] getResultPoints() {
-        return mResult.getResultPoints();
+        if (mResult != null) {
+            return mResult.getResultPoints();
+        } else {
+            return new ResultPoint[0];
+        }
     }
 
     /**
@@ -147,7 +161,11 @@ public class BarcodeResult {
      * @see Result#getBarcodeFormat()
      */
     public BarcodeFormat getBarcodeFormat() {
-        return mResult.getBarcodeFormat();
+        if (mResult != null) {
+            return mResult.getBarcodeFormat();
+        } else {
+            return null;
+        }
     }
 
     /**
