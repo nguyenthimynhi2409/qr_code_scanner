@@ -31,7 +31,6 @@ import com.google.zxing.client.android.R;
 
 import java.util.ArrayList;
 import java.util.List;
-import com.journeyapps.barcodescanner.R;
 
 /**
  * This view is overlaid on top of the camera preview. It adds the viewfinder rectangle and partial

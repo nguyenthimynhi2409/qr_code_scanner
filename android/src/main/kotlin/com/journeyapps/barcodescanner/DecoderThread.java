@@ -15,7 +15,6 @@ import com.journeyapps.barcodescanner.camera.CameraInstance;
 import com.journeyapps.barcodescanner.camera.PreviewCallback;
 
 import java.util.List;
-import com.journeyapps.barcodescanner.R;
 
 /**
  *
