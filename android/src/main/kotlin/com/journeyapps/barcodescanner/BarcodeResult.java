@@ -53,6 +53,10 @@ public class BarcodeResult {
         return mResult;
     }
 
+    public SourceData getSourceData() {
+        return sourceData;
+    }
+
     /**
      * @return {@link Bitmap} with barcode preview
      * @see #getBitmapWithResultPoints(int)

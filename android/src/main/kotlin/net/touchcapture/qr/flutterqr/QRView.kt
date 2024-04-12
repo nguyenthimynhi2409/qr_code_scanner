@@ -245,6 +245,7 @@ class QRView(
                             "code" to result.text,
                             "type" to result.barcodeFormat.name,
                             "rawBytes" to result.rawBytes
+                            "image" to result.sourceData
                         )
 
                         channel.invokeMethod(CHANNEL_METHOD_ON_RECOGNIZE_QR, code)

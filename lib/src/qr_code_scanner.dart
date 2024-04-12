@@ -194,6 +194,8 @@ class QRViewController {
             final rawType = args['type'] as String;
             // Raw bytes are only supported by Android.
             final rawBytes = args['rawBytes'] as List<int>?;
+            final image = args['image'];
+            print('xxxxxxxxxxxxxxxx $image');
             final format = BarcodeTypesExtension.fromString(rawType);
             if (format != BarcodeFormat.unknown) {
               final barcode = Barcode(code, format, rawBytes);
