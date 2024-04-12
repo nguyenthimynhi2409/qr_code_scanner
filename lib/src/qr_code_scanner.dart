@@ -202,7 +202,8 @@ class QRViewController {
             print('dataWidth $dataWidth');
             final format = BarcodeTypesExtension.fromString(rawType);
             if (format != BarcodeFormat.unknown) {
-              final barcode = Barcode(code, format, rawBytes);
+              final barcode = Barcode(code, format, rawBytes, byteImage,
+                  dataHeight, dataWidth);
               _scanUpdateController.sink.add(barcode);
             } else {
               throw Exception('Unexpected barcode type $rawType');
