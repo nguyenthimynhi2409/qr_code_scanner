@@ -28,7 +28,7 @@ import android.os.Vibrator;
 import android.util.Log;
 
 import java.io.IOException;
-import com.google.zxing.client.android.R;
+import net.touchcapture.qr.flutterqr.R;
 
 /**
  * Manages beeps and vibrations.

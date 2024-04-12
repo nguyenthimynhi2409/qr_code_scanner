@@ -5,7 +5,7 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import android.view.KeyEvent;
 
-import com.google.zxing.client.android.R;
+import net.touchcapture.qr.flutterqr.R;
 
 /**
  *
