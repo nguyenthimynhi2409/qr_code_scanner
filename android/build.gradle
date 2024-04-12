@@ -29,7 +29,7 @@ android {
 
     sourceSets {
         main.java.srcDirs += 'src/main/kotlin'
-        main.res.srcDirs = ['res-orig', 'res']
+        main.res.srcDirs = ['src/main/res-orig', 'src/main/res']
     }
     defaultConfig {
         // minSdkVersion is determined by Native View.
