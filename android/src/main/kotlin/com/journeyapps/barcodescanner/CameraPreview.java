@@ -34,6 +34,7 @@ import com.journeyapps.barcodescanner.camera.PreviewScalingStrategy;
 
 import java.util.ArrayList;
 import java.util.List;
+import android.R;
 
 /**
  * CameraPreview is a view that handles displaying of a camera preview on a SurfaceView. It is

@@ -33,6 +33,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.List;
 import java.util.Map;
+import android.R;
 
 /**
  * Manages barcode scanning for a CaptureActivity. This class may be used to have a custom Activity

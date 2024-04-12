@@ -12,6 +12,7 @@ import com.google.zxing.client.android.R;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import android.R;
 
 /**
  * A view for scanning barcodes.
