@@ -6,7 +6,7 @@ import androidx.annotation.NonNull;
 import android.view.KeyEvent;
 
 import com.google.zxing.client.android.R;
-import android.R;
+import com.journeyapps.barcodescanner.R;
 
 /**
  *

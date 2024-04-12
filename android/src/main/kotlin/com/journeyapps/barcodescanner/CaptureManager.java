@@ -33,7 +33,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.List;
 import java.util.Map;
-import android.R;
+import com.journeyapps.barcodescanner.R;
 
 /**
  * Manages barcode scanning for a CaptureActivity. This class may be used to have a custom Activity

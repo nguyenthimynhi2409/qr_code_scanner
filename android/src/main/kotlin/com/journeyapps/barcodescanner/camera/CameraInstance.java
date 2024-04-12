@@ -8,7 +8,7 @@ import android.view.SurfaceHolder;
 import com.google.zxing.client.android.R;
 import com.journeyapps.barcodescanner.Size;
 import com.journeyapps.barcodescanner.Util;
-import android.R;
+import com.journeyapps.barcodescanner.R;
 
 /**
  * Manage a camera instance using a background thread.

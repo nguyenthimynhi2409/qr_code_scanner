@@ -22,7 +22,7 @@ import com.journeyapps.barcodescanner.camera.CameraSettings;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-import android.R;
+import com.journeyapps.barcodescanner.R;
 
 /**
  * Encapsulates BarcodeView, ViewfinderView and status text.
