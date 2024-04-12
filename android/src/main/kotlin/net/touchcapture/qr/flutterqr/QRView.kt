@@ -240,14 +240,18 @@ class QRView(
         barcodeView?.decodeContinuous(
             object : BarcodeCallback {
                 override fun barcodeResult(result: BarcodeResult) {
+                    if (allowedBarcodeTypes.isEmpty() || allowedBarcodeTypes.contains(result.barcodeFormat)) {
                     val code = mapOf(
-                        "code" to result?.text,
-                        "type" to result?.barcodeFormat?.name,
-                        "rawBytes" to result?.rawBytes,
-                        "image" to result?.sourceData
+                            "code" to result.text,
+                            "type" to result.barcodeFormat.name,
+                            "rawBytes" to result.rawBytes
+                            "byteImage" to result.sourceData.data,
+                            "dataHeight" to result.sourceData.dataHeight,
+                            "dataWidth" to result.sourceData.dataWidth,
                     )
 
                     channel.invokeMethod(CHANNEL_METHOD_ON_RECOGNIZE_QR, code)
+                }
                 }
 
                 override fun possibleResultPoints(resultPoints: List<ResultPoint>) = Unit
