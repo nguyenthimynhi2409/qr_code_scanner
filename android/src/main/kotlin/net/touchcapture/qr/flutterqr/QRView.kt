@@ -243,7 +243,7 @@ class QRView(
                     val code = mapOf(
                         "code" to result?.text,
                         "type" to result?.barcodeFormat?.name,
-                        "rawBytes" to result?.rawBytes
+                        "rawBytes" to result?.rawBytes,
                         "image" to result?.sourceData
                     )
 

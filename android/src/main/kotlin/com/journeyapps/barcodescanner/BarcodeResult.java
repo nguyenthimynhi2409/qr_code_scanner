@@ -123,11 +123,7 @@ public class BarcodeResult {
      * @see Result#getText()
      */
     public String getText() {
-        if (mResult != null) {
-            return mResult.getText();
-        } else {
-            return '';
-        }
+        return mResult.getText();
     }
 
     /**
@@ -135,11 +131,7 @@ public class BarcodeResult {
      * @see Result#getRawBytes()
      */
     public byte[] getRawBytes() {
-        if (mResult != null) {
             return mResult.getRawBytes();
-        } else {
-            return null;
-        }
     }
 
     /**
@@ -149,11 +141,7 @@ public class BarcodeResult {
      * @see Result#getResultPoints()
      */
     public ResultPoint[] getResultPoints() {
-        if (mResult != null) {
             return mResult.getResultPoints();
-        } else {
-            return new ResultPoint[0];
-        }
     }
 
     /**
@@ -161,11 +149,7 @@ public class BarcodeResult {
      * @see Result#getBarcodeFormat()
      */
     public BarcodeFormat getBarcodeFormat() {
-        if (mResult != null) {
             return mResult.getBarcodeFormat();
-        } else {
-            return null;
-        }
     }
 
     /**
